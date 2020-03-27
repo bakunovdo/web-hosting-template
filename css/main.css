@@ -21,11 +21,52 @@ body {
     color: #9ba4b0;
     letter-spacing: 0.1px;
 }
-.container{
+.container {
     max-width: 1170px;
     margin: 0 auto;
 }
+/* --- default styles --- */
+.title-default { 
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #859aa1;
+    position: relative;
+}
+.title-default b{ 
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: -0.25px;
+    line-height: 31px;
+    text-transform: uppercase;
+    color: #556b72;
+}
+.title-default::after { 
+    content: "";
+    width: 21px;
+    height: 2px;
+    top:-7px;
+    left:0;
+    position: absolute;
+    background-color: #ff8261;
+    margin-bottom: 12px;
+}
+.bth-default {
+    width: 195px;
+    height: 55px;
+    background-color: #ff8261;
+    text-align: center;
+    line-height: 55px;
+    top: auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+/* --- \def styles --- */
 
+/* --- header --- */
 .header { 
     min-height: 160px;
 }
@@ -111,7 +152,9 @@ body {
     background-color: #52cbf8;
     transition: all .1s;
 }
+/* --- \header --- */
 
+/* --- slider --- */
 .slider{
     background-image: url(../img/slider-fon.png);
     background-repeat: no-repeat;
@@ -180,14 +223,14 @@ body {
     border-radius: 25px;
     cursor: pointer;
 }
+/* --- \slider --- */
 
+/* --- search --- */
 .search{
     width:100%;
     height: 200px;
     background-color: #e7f4f8;
 }
-
-
 .search .container {
     display: flex;
     justify-content: center;
@@ -195,25 +238,20 @@ body {
     align-items: center;
     height: 100%;
 }
-
-.search__text {
-    font-size: 18px;
-    line-height: 31px;
-    letter-spacing: 0.25px;
-    text-transform: uppercase;
-    margin-right: 30px;
+.search__title { 
+    padding-right: 25px;
+    position: relative;
 }
-.search__text svg{
+.search__title::after{
+    content: '\e904';
+    font-family: 'icomoon';
+    background-color: transparent;
+    position: absolute;
+    top:-25px;
+    left:0;
+    font-size: 20px;
     color: orangered;
-    width: 25px!important;
-    height: 25px;
-}
-.search__text b {
-    font-weight: 900;
-    font-size: 31px;
-    line-height: 31px;
-    letter-spacing: -0.25px;
-    color: #556b72;
+
 }
 .domain.input-default{
     width: 430px;
@@ -246,62 +284,20 @@ body {
 .select-default:focus{
     border: 1px solid #5264AE;
 }
-.bth-default {
-    width: 195px;
-    height: 55px;
-    background-color: #ff8261;
-    text-align: center;
-    line-height: 55px;
-    top: auto;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 1px;
-}
 /* --- benefits --- */
-
-.benefits .container { 
-    padding-top: 85px;
+.benefits .container{ 
+    padding-top: 80px;
     padding-bottom: 115px;
 }
-
 .benefits__title { 
-    font-size: 18px;
-    letter-spacing: 0.25px;
-    line-height: 20px;
-    text-transform: uppercase;
-    color: #859aa1;
-    position: relative;
     margin-bottom: 25px;
 }
-
-.benefits__title b{ 
-    font-weight: 900;
-    font-size: 30px;
-    letter-spacing: -0.25px;
-    line-height: 31px;
-    text-transform: uppercase;
-    color: #556b72;
-}
-
-.benefits__title::after { 
-    content: "";
-    width: 21px;
-    height: 2px;
-    top:-7px;
-    left:0;
-    position: absolute;
-    background-color: #ff8261;
-    margin-bottom: 12px;
-}
-
 .benefits_content{ 
     display: flex;
     flex-flow: row wrap;
     width: 100%;
     justify-content: space-between;
 }
-
 .benefits__item { 
     width: 350px;
     height: 120px;
@@ -309,7 +305,6 @@ body {
     margin-bottom: 12px;
     position: relative;
 }
-
 .benefits__item-title {
     font-size: 16px;
     font-weight: 800;
@@ -318,14 +313,11 @@ body {
     color: #556b72;
     text-transform: uppercase;
 }
-
 .benefits__item-text {
     line-height: 24px;
     color: #a0a9b6;
 }
-        /* +++ DNS +++  */
-.benefits__item:nth-child(1):before { 
-    content: '\e9bc';
+.benefits__item::before {
     font-family: 'icomoon';
     position: absolute;
     top: -5px;
@@ -334,71 +326,247 @@ body {
     font-size: 60px;
 }
         /* +++ DNS +++  */
+.benefits__item:nth-child(1):before { 
+    content: '\e9bc';
+}
+        /* +++ DNS +++  */
 .benefits__item:nth-child(2):before { 
     content: '\e994';
-    font-family: 'icomoon';
-    position: absolute;
-    top: -5px;
-    left: 0px;
-    color: #ff8261;
-    font-size: 60px;
 }
     /* +++ SUPPORT +++  */
 .benefits__item:nth-child(3):before { 
     content: '\e970';
-    font-family: 'icomoon';
-    position: absolute;
-    top: -5px;
-    left: 0px;
-    color: #ff8261;
-    font-size: 60px;
 }
     /* +++ DOMAIN +++  */
 .benefits__item:nth-child(4):before { 
     content: '\e903';
-    font-family: 'icomoon';
-    position: absolute;
-    top: -5px;
-    left: 0px;
-    color: #ff8261;
-    font-size: 60px;
 }
     /* +++ PROTECT +++  */
 .benefits__item:nth-child(5):before { 
     content: '\e901';
-    font-family: 'icomoon';
-    position: absolute;
-    top: -5px;
-    left: 0px;
-    color: #ff8261;
-    font-size: 60px;
 }
     /* +++ SECURITY +++  */
 .benefits__item:nth-child(6):before { 
     content: '\e902';
-    font-family: 'icomoon';
-    position: absolute;
-    top: -5px;
-    left: 0px;
-    color: #ff8261;
-    font-size: 60px;
 }
-    /* +++ COG DNS++  */
-.benefits__item:nth-child(2):before { 
-    content: '\e994';
-    font-family: 'icomoon';
-    position: absolute;
-    top: -5px;
-    left: 10px;
-    color: #ff8261;
-    font-size: 60px;
-}
-
-
-
-
-
 /* --- \benefits --- */
+
+/* --- promo --- */
+.promo {
+    width:100%;
+    height: 380px;
+    background-color: #fffbde;
+
+}
+.promo .container {
+    height: 100%;
+    padding-bottom: 125px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+}
+.promo .hot {
+    align-self: flex-end;
+}
+.hot__title {
+    padding-bottom: 33px;
+} 
+.coupon {
+    text-transform: uppercase;
+    width: 360px;
+    height: 115px;
+    background-color: #fff;
+    padding: 10px;
+}
+.coupon__wrapper {
+    border: 2px solid #fffbde; 
+    height: 100%;
+    padding: 10px;
+}
+.coupon__content { 
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 100%;
+}
+.coupon__content .sale {
+    color: #ff8261;
+    line-height: 28px;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    width: 65%;
+}
+.coupon__content .sale b {
+    color: #52cbf8;
+}
+.coupon__content .sale::first-line {
+    color: #97947f;
+    font-size: 14px;
+}
+.coupon__content .term {
+    align-self: flex-end;
+    line-height: 20px;
+}
+.coupon__content .term b{
+    color: #4c515b;
+    letter-spacing: -0.25px;
+    font-size: 17px;
+}
+.coupon__content .term b{
+    color: #4c515b;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-size: 17px;
+}
+.features {
+    height: 200px;
+    width: 37%;
+    align-self: flex-end;
+}
+.features__title {
+    padding-bottom: 33px;
+}
+.features__list {
+    display: flex;
+    justify-content: space-between;
+}
+.features__list .col1{ 
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+}
+.features__list .col2{ 
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+}
+.feature__item  { 
+    padding: 5px 0px 10px 15px;
+    position: relative;
+    color: #696556;
+}
+.feature__item::after  { 
+    content: '\e905';
+    height: 80%;
+    font-family: 'icomoon';
+    color: #4c515b;
+    font-weight: 900;
+    font-size: 17px;
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    transform: translateY(-50%);
+}
+.promo .bth-default {
+    align-self: flex-end;
+}
+/* --- \promo --- */
+
+/* --- Plans --- */
+.plans .container {
+    padding-top: 95px;
+    padding-bottom: 110px;
+
+}
+.plans__list {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+.plans__title{ 
+    margin-bottom: 28px;
+}
+
+.plans__item {
+    height: 500px;
+    width: 265px;
+    text-align: center;
+    border: 1px solid #e1eff4;
+    padding: 10px;
+    display:flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.plan__price {
+    color: #556b72;
+    line-height: 27px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.plan__price-title {
+    font-size: 50px;
+    font-weight: 100;
+    font-weight: bolder;
+}
+.plan__price-title::first-letter {/
+    font-size: 50px;
+    font-weight: 300;
+}
+.plan__price-subtitle {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1;
+}
+.plan__name {
+    width: 185px;
+    height: 40px;
+    background-color: #52cbf8;
+    text-align: center;
+    line-height: 40px;
+    top: auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+.plan__advantages {
+    width: 85%;
+    margin-top: 25px;
+}
+.plan__advantages .advantage {
+    padding-top: 13px;
+
+}
+.plan__advantages .advantage:first-child {
+    padding-top: 0px;
+}
+.advantage:nth-child(-n+4)  {
+    width: 100%;
+    border-bottom: 1px solid #c8d4dd;
+    padding-bottom: 13px;
+}
+.plans__item .bth-default {
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+/* --- \Plans --- */
+
+/* --- domain__subscribe --- */
+.domain__subscribe {
+    height: 230px;
+    width:100%;
+    background-color: #e7f4f8;
+}
+.domain__subscribe .container {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+.domain__subscribe .subscribe.input-default {
+    width: 720px;
+    margin-right: 0;
+}
+
+
+/* --- \domain__subscribe --- */
+
 
   
 
