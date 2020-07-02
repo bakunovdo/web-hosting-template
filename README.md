@@ -1,2 +1,3 @@
 # web-hosting-template
-(Site)[https://bakunovdo.github.io/web-hosting-template/]
+
+Go to the [site](https://bakunovdo.github.io/web-hosting-template/)
